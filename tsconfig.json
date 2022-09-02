@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    // Path alias config
+    "baseUrl": ".",
+    "paths": {
+      // This needs to be mirrored in babel.config.js
+      // Components is a directory with sub directories
+      "components/*": ["./components/*"],
+      "screens/*": ["./screens/*"]
+    },
+  },
+  "extends": "expo/tsconfig.base",
+}
