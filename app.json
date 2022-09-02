@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "go-to-prototype-native",
+    "slug": "go-to-prototype-native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
