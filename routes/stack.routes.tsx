@@ -1,4 +1,4 @@
-import { ScreenA, ScreenB } from 'screens';
+import { ScreenA, ScreenB, ScreenC } from 'screens';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -9,6 +9,7 @@ export function StackRoutes() {
     <Navigator>
       <Screen name="screenA" component={ScreenA} />
       <Screen name="screenB" component={ScreenB} />
+      <Screen name="screenC" component={ScreenC} />
     </Navigator>
   );
 }

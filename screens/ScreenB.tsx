@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 interface BarCodeScannedProps {
   type: string;
   data: string;
@@ -12,6 +14,7 @@ export function ScreenB() {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
   const [scanned, setScanned] = useState(false);
   const [text, setText] = useState('Not yet scanned');
+  const navigation = useNavigation();
 
   const askForCameraPermission = () => {
     (async () => {
@@ -29,6 +32,10 @@ export function ScreenB() {
     setText(data);
     console.log('Type: ' + type + '\nData: ' + data);
   };
+
+  function onNextScreen() {
+    navigation.navigate('screenC');
+  }
 
   if (hasPermission === null) {
     return (
@@ -66,6 +73,8 @@ export function ScreenB() {
           color="tomato"
         />
       )}
+
+      <Button title="Go to next screen" onPress={onNextScreen} />
     </View>
   );
 }
