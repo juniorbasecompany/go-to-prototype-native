@@ -7,7 +7,8 @@
       // This needs to be mirrored in babel.config.js
       // Components is a directory with sub directories
       "components/*": ["./components/*"],
-      "screens/*": ["./screens/*"]
+      "screens/*": ["./screens/*"],
+      "contexts/*": ["./contexts/*"],
     },
   },
   "extends": "expo/tsconfig.base",
