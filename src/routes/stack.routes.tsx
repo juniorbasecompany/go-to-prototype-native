@@ -1,8 +1,8 @@
-import { ScreenC } from 'screens';
-import { EventInfo } from 'screens/eventInfo';
-import { HistoricalList } from 'screens/historicalList';
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import { ScreenC } from '../screens';
+import { EventInfo } from '../screens/eventInfo';
+import { HistoricalList } from '../screens/historicalList';
 
 const { Screen, Navigator } = createNativeStackNavigator();
 

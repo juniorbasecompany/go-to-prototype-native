@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     padding: 24,
     backgroundColor: '#FFFFFF',
   },
-  title: {
+  card: {
     marginTop: 16,
     paddingTop: 10,
     width: '100%',

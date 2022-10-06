@@ -8,12 +8,18 @@ module.exports = function(api) {
         {
           alias: {
             // This needs to be mirrored in tsconfig.json
-            components: "./components",
-            screens: "./screens",
-            contexts: "./contexts"
+            src: "./src",
           },
-        },
+        }
       ],
+      ["module:react-native-dotenv", {
+        "moduleName": "@env",
+        "path": ".env",
+        "blacklist": null,
+        "whitelist": null,
+        "safe": false,
+        "allowUndefined": true
+      }]
     ],
   };
 };

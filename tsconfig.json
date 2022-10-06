@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
     "strict": true,
+    "module": "esnext",
     // Path alias config
     "baseUrl": ".",
     "paths": {
       // This needs to be mirrored in babel.config.js
       // Components is a directory with sub directories
-      "components/*": ["./components/*"],
-      "screens/*": ["./screens/*"],
-      "contexts/*": ["./contexts/*"],
+      "src/*": ["src/*"],
+      "@env": ["node_modules/react-native-dotenv"]
     },
   },
   "extends": "expo/tsconfig.base",
+  "typeRoots": ["./types"],
 }

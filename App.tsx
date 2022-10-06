@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { GoToContext } from './contexts';
-import { Routes } from './routes';
+import { GoToContext } from './src/contexts';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [guid, setGuid] = React.useState<string>('');
