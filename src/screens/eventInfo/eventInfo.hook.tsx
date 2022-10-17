@@ -18,11 +18,11 @@ export const useEventInfo = (): EventInfoProps => {
   React.useEffect(() => {
     axios
       .post(
-        API_URL,
+        'https://data.mongodb-api.com/app/data-pmwmo/endpoint/data/v1/action/findOne',
         {
-          collection: COLLECTION,
-          database: DATABASE,
-          dataSource: DATA_SOURCE,
+          collection: 'go-to-collection',
+          database: 'go-to-database',
+          dataSource: 'Cluster0',
         },
         {
           headers: header,
