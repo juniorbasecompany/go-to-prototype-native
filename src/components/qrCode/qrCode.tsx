@@ -4,14 +4,13 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import { Button, Text, View } from 'react-native';
 
 import { useQrCode } from './qrCode.hook';
-import { styles } from './qrCode.style';
 
 export interface QrCodeInput {
   navigateTo: keyof ReactNavigation.RootParamList;
 }
 
 export const QrCode: React.FC<QrCodeInput> = (props) => {
-  const { hasPermission, scanned, text, onBarCodeScanned } = useQrCode(props);
+  const { hasPermission, scanned, onBarCodeScanned } = useQrCode(props);
 
   const askForCameraPermission = (): void => {
     throw new Error('Function not implemented.');
@@ -38,7 +37,17 @@ export const QrCode: React.FC<QrCodeInput> = (props) => {
 
   return (
     <View>
-      <View style={styles.barcodebox}>
+      <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: 300,
+          width: 300,
+          overflow: 'hidden',
+          borderRadius: 30,
+          backgroundColor: 'tomato',
+        }}
+      >
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : onBarCodeScanned}
           style={{ height: 400, width: 400 }}

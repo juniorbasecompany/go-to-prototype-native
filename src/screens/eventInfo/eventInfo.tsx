@@ -4,13 +4,18 @@ import { View } from 'react-native';
 
 import { Card } from '../../components/card';
 import { useEventInfo } from './eventInfo.hook';
-import { styles } from './eventInfo.style';
 
 export const EventInfo = () => {
   const { data } = useEventInfo();
   return (
     <View>
-      <View style={styles.container}>
+      <View
+        style={{
+          flex: 1,
+          padding: 24,
+          backgroundColor: '#FFFFFF',
+        }}
+      >
         {data.map((item: any, index: number) => {
           return <Card key={index} item={item} />;
         })}
