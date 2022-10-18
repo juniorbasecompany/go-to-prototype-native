@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Image, Text, View } from 'react-native';
-import { Card } from 'src/components';
+import { View } from 'react-native';
 
+import { Card } from '../../components/card';
 import { useEventInfo } from './eventInfo.hook';
 import { styles } from './eventInfo.style';
 

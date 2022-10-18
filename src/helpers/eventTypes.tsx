@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Text } from 'react-native';
 
-import { Image } from '../components';
+import { Image } from '../components/image';
 
 export const getEventComponent = (
   eventType: string,

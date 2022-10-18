@@ -7,10 +7,8 @@
     "paths": {
       // This needs to be mirrored in babel.config.js
       // Components is a directory with sub directories
-      "src/*": ["src/*"],
-      "@env": ["node_modules/react-native-dotenv"]
+      "src/*": ["src/*"]
     },
   },
   "extends": "expo/tsconfig.base",
-  "typeRoots": ["./types"],
 }

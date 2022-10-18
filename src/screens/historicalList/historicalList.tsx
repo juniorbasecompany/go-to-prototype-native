@@ -2,7 +2,8 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { Button, QrCode } from '../../components';
+import { Button } from '../../components/button';
+import { QrCode } from '../../components/qrCode';
 import { useHistoricalList } from './historicalList.hook';
 import { styles } from './historicalList.style';
 

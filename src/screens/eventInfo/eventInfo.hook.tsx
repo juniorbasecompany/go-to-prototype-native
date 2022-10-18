@@ -2,9 +2,13 @@ import React from 'react';
 
 import axios from 'axios';
 
-import { API_URL, COLLECTION, DATABASE, DATA_SOURCE } from '@env';
-
-import { header } from '../../configs/apiConfig';
+import {
+  API_URL,
+  COLLECTION,
+  DATABASE,
+  DATA_SOURCE,
+  header,
+} from '../../configs/apiConfig';
 import { GoToContext } from '../../contexts';
 
 interface EventInfoProps {
@@ -18,11 +22,11 @@ export const useEventInfo = (): EventInfoProps => {
   React.useEffect(() => {
     axios
       .post(
-        'https://data.mongodb-api.com/app/data-pmwmo/endpoint/data/v1/action/findOne',
+        API_URL,
         {
-          collection: 'go-to-collection',
-          database: 'go-to-database',
-          dataSource: 'Cluster0',
+          collection: COLLECTION,
+          database: DATABASE,
+          dataSource: DATA_SOURCE,
         },
         {
           headers: header,
