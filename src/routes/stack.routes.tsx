@@ -1,14 +1,16 @@
-import { ScreenA, ScreenB, ScreenC } from 'screens';
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import { ScreenC } from '../screens';
+import { EventInfo } from '../screens/eventInfo';
+import { HistoricalList } from '../screens/historicalList';
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
 export function StackRoutes() {
   return (
     <Navigator>
-      <Screen name="screenA" component={ScreenA} />
-      <Screen name="screenB" component={ScreenB} />
+      <Screen name="historicalList" component={HistoricalList} />
+      <Screen name="eventInfo" component={EventInfo} />
       <Screen name="screenC" component={ScreenC} />
     </Navigator>
   );

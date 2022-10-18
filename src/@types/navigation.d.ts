@@ -1,8 +1,8 @@
 export declare global {
   namespace ReactNavigation {
     interface RootParamList {
-      screenA: undefined;
-      screenB: undefined;
+      historicalList: undefined;
+      eventInfo: undefined;
       screenC: undefined;
     }
   }

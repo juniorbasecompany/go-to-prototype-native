@@ -1,7 +1,18 @@
 import React from 'react';
 
-import { Routes } from './routes';
+import { GoToContext } from './src/contexts';
+import { Routes } from './src/routes';
 
 export default function App() {
-  return <Routes />;
+  const [guid, setGuid] = React.useState<string>('');
+
+  const addGuid = (value: string) => {
+    setGuid(value);
+  };
+
+  return (
+    <GoToContext.Provider value={{ guid, addGuid }}>
+      <Routes />
+    </GoToContext.Provider>
+  );
 }
