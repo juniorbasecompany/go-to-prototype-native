@@ -9,8 +9,16 @@ const { Screen, Navigator } = createNativeStackNavigator();
 export function StackRoutes() {
   return (
     <Navigator>
-      <Screen name="historicalList" component={HistoricalList} />
-      <Screen name="eventInfo" component={EventInfo} />
+      <Screen
+        name="historicalList"
+        component={HistoricalList}
+        options={{ title: 'Historical' }}
+      />
+      <Screen
+        name="eventInfo"
+        component={EventInfo}
+        options={{ title: 'Events' }}
+      />
       <Screen name="screenC" component={ScreenC} />
     </Navigator>
   );

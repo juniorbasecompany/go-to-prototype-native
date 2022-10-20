@@ -1,29 +1,36 @@
 import React from 'react';
 
-import { Text } from 'react-native';
+import { FlatList, View } from 'react-native';
 
 import { getEventComponent } from '../../helpers/eventTypes';
 
 export const Card = ({ item }: any) => {
+  const events = Object.keys(item.event.schema.properties).map(
+    (property: string, index: number) => {
+      return { id: index, eventType: property, item };
+    }
+  );
+
   return (
-    <Text
+    <View
       style={{
-        marginTop: 16,
-        paddingTop: 10,
-        width: '100%',
-        height: 150,
-        backgroundColor: '#0000ff',
-        color: '#FFFFFF',
-        textAlign: 'center',
-        fontSize: 14,
-        fontWeight: 'bold',
+        backgroundColor: 'blue',
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 10,
+        flex: 1,
+        flexDirection: 'row',
       }}
     >
-      {Object.keys(item.event.schema.properties).map(
-        (property: string, propertyIndex: number) => {
-          return getEventComponent(property, propertyIndex, item, property);
+      <FlatList
+        data={events}
+        renderItem={({ item }) =>
+          getEventComponent(
+            item.eventType,
+            item.item.event.info[item.eventType]
+          )
         }
-      )}
-    </Text>
+      />
+    </View>
   );
 };

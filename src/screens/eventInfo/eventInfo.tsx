@@ -7,19 +7,18 @@ import { useEventInfo } from './eventInfo.hook';
 
 export const EventInfo = () => {
   const { data } = useEventInfo();
+
   return (
-    <View>
-      <View
-        style={{
-          flex: 1,
-          padding: 24,
-          backgroundColor: '#FFFFFF',
-        }}
-      >
-        {data.map((item: any, index: number) => {
-          return <Card key={index} item={item} />;
-        })}
-      </View>
+    <View
+      style={{
+        flex: 1,
+        padding: 24,
+        backgroundColor: '#FFFFFF',
+      }}
+    >
+      {data.map((item: any, index: number) => {
+        return <Card key={index} item={item} />;
+      })}
     </View>
   );
 };
